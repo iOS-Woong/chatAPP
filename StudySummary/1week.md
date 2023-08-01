@@ -8,10 +8,12 @@
     - 스터디원 8명과 1:1 or 1:N 대화 기능
 
 - **친구목록 View의 구현**
-    1. Vapor 서버를 활용해서 받아오도록 함
+    1. Vapor 서버를 활용해서 친구목록을 받아오도록 함
     2. openssl 이용한 사설 CA 및 인증서 생성해서 적용
     
-- **대화방목록 기능과 1:1 & 1:N의 구현** 에 대한 방법을 일부 알려줬지만, 기록하면서 들었는데도 이해가 가지않는다. 스터디를 진행하면서 이해 할 수 있도록 노력해보자
+- **대화방목록 기능과 1:1 & 1:N의 구현**
+    1. 이 내용도 일부 알려주셨지만, 기록하면서 들었는데도 이해가 가지않는다.
+    2. 스터디를 진행하면서 이해 할 수 있도록 노력해보자
 
 ---
 ### 진행요약
@@ -38,13 +40,15 @@
     vapor xcode
     ```
 3. vapor xcode를 통해 실행하게되면 엄청나게 많은 Package Dependencies와 함께 SPM 다운로드가 시작됨. 
-    ![](https://hackmd.io/_uploads/BkqWvgHoh.png)
+
+    <img width="1148" alt="스크린샷 2023-07-31 오후 5 54 44" src="https://github.com/iOS-Woong/chatAPP/assets/96489602/3930d4eb-589d-4bd8-b286-2caf302ded9b">
 
 4. 이걸 빌드하게되면 console창에 아래와 같은 텍스트가 찍히게된다. 그리고 이 URL을 chrome을 통해 접근하면 Hello World란 텍스트가 찍힌 웹을 확인 할 수 있다.
     ```
     [ NOTICE ] Server starting on http://127.0.0.1:8080
     ```
-    ![](https://hackmd.io/_uploads/H1HCOxSjh.png)
+    <img width="1009" alt="스크린샷 2023-07-31 오후 6 02 51" src="https://github.com/iOS-Woong/chatAPP/assets/96489602/1220e8e5-ef9a-44cc-a320-f18d1a9a22fe">
+
 
 5. 이제 SSL(Secure Sockets Layer)이 적용되어있지 않은 http:// 로 되어있는 URL을 SSL을 적용시켜 https:// 로 변경시켜줘야한다.
     
@@ -59,7 +63,8 @@
     ```
     - 입력값에 대해 소개하는 아티클 https://m.blog.naver.com/espeniel/221845133507
     - 터미널에 위 코드를 통해서 Self signing SSL 인증서를 생성하게되면 cert.pem, key.pem이라는 키 파일이 두개 생성된다.
-    ![](https://hackmd.io/_uploads/BySdfXUsn.png)
+    
+    <img width="1209" alt="스크린샷 2023-08-01 오후 3 12 50" src="https://github.com/iOS-Woong/chatAPP/assets/96489602/9082a73e-4105-4764-b5a6-6cc14edb147f">
 
 8. HTTP2 지원을 활성화하려면 Vapor에서 HTTPServer 구성 서비스를 등록해야함.
     - configure.swift 파일에서 이 작업을 수행할 수 있다.
@@ -101,10 +106,12 @@
     
 9. 위 코드를 작성하고 빌드를 통해 HTTP2 지원을 활성화한다.
     - 콘솔창에 아래와 같이 보안이 적용된 URL https://---- 형태로 URL이 보여진다.
-    ![](https://hackmd.io/_uploads/H1-mu7Ush.png)
     
+    <img width="839" alt="스크린샷 2023-08-01 오후 3 37 03" src="https://github.com/iOS-Woong/chatAPP/assets/96489602/6fbbb4b1-444f-4c67-ba40-2db2a0c30a37">
+
     - URL에 접근하여 Chrome의 우클릭 + 검사창으로 적용된 프로토콜을 확인해보면 HTTP2가 적용되었다는 것을 확인 할 수 있다.
-    ![](https://hackmd.io/_uploads/HkwiwQLi3.png)
+    
+    <img width="898" alt="스크린샷 2023-08-01 오후 3 34 00" src="https://github.com/iOS-Woong/chatAPP/assets/96489602/3876d43b-1b3a-4a84-86b2-259f35358e95">
 
 10. 1주차 스터디에서 진행한 사항을 정리하면 아래와 같다.
     - Vapor를 통해서 초기에 서버를 구현했다.(보안이 적용되지않은 http로)
@@ -117,7 +124,7 @@
 ### 문제사항
 
 1. [ WARNING ] No custom working directory set for this scheme, using --- 서버를 활성화시키게 되면 아래 에러메시지가 출력되었다.
-    ![](https://hackmd.io/_uploads/r1amzE8oh.png)
+    <img width="839" alt="스크린샷 2023-08-01 오후 3 37 03" src="https://github.com/iOS-Woong/chatAPP/assets/96489602/bf39ee4c-0b59-42ad-9a7e-be64ec468fd1">
 
     - **원인**
     기본적으로 Xcode에서 프로젝트를 실행하면 프로젝트의 루트 폴더가 아니라 
