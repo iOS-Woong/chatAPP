@@ -15,6 +15,6 @@
 
 ### 기록
 
- [ 📑 1주차 요약: Vapor 활용하여 서버를 생성 및 SSL/TLS를 생성하여 HTTP2 지원 가능하도록 설정 - (23/07/26)](https://github.com/iOS-Woong/chatAPP/blob/main/StudySummary/1week.md)  
+[ 📑 1주차 요약: Vapor 활용하여 서버를 생성 및 SSL/TLS를 생성하여 HTTP2 지원 가능하도록 설정 - (23/07/26)](https://github.com/iOS-Woong/chatAPP/blob/main/StudySummary/1week.md)  
    
-[ 📑 2주차 요약: MariaDB로 DB 구성 & Vapor와 DB Mapping & Vapor에서 HTTP요청별 Handler 설정 & TestRequest - (23/08/02)](https://github.com/iOS-Woong/messengerAppStudy/blob/main/StudySummary/2week.md)
+[ 📑 2주차 요약: MariaDB로 DB 구성 & 객체-DB Mapping & Vapor에서 HTTP요청별 Handler 설정 - (23/08/02)](https://github.com/iOS-Woong/messengerAppStudy/blob/main/StudySummary/2week.md)
