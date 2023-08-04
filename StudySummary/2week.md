@@ -19,12 +19,13 @@
 |name|String|
 ---
 ### 진행요약
-- Homebrew를 이용하여 mariadb 설치
-- dbeaver등을 이용하여 mariadb에 connect하고 db를 세팅한다(테이블, 칼럼 등)
-- vapor에 fluent, fluentMySQL라이브러리 의존성 추가
-- fluent 이용하여 configuration에서 로컬 db 연결
-- Vapor에서 모델 타입 정의 하여 db값 매핑 기반 마련
-- route에서 특정 path에 대해 db를 모델로 매핑한 값 반환 (json 자동변환 해주는 것 같음)
+- Homebrew를 이용하여 MariaDB 설치
+- Dbeaver등을 이용하여 Mariadb에 Connect하고 DB를 세팅한다(테이블, 칼럼 등)
+- Vapor의 객체와 MariaDB의 DB를 매핑(ORM) 해주기위해 fluent, fluentMySQL라이브러리 의존성 추가
+- Fluent 이용하여 configuration.swift에서 로컬 db 연결
+- Vapor에서 매핑할 객체 정의
+- Route에서 특정 path에 대해 DB를 모델로 매핑한 값 반환되도록 구현
+- Test Request(GET,POST)
 ---
 
 ### 세부진행사항
