@@ -2,9 +2,7 @@
 
 ### 회원정보 Test DB 구성
 
-:::info
 :information_source: DB구성 (*: pk, #: fk)
-
 // USER
 |    |Type|
 |:-: |:-:|
@@ -19,8 +17,6 @@
 |:-: |:-:|
 |id(*)|Int|
 |name|String|
-:::
-
 ---
 ### 진행요약
 - Homebrew를 이용하여 mariadb 설치
@@ -49,58 +45,59 @@ sudo mysql -u root
 - https://mariadb.com/kb/ko/installing-mariadb-on-macos-using-homebrew/
 
 3. MariaDB mysql root 암호를 변경한다.
-![](https://hackmd.io/_uploads/ryPu9M_o2.png)
-- DBeaver(DBMS)에 MariaDB를 연결 해주기 위해 password를 변경시켜주는 것으로 예상된다.
-
+- [root 비밀번호변경방법](https://hansoul.tistory.com/74)
+- 왜함? DBeaver(DBMS)에 MariaDB를 연결 해주기 위해 password를 변경시켜주는 것으로 예상된다.
 
 4. 처음에 설치한 Dbeaver(DBMS)로 이동하여 사용할 데이터베이스를 추가한다.
 - 데이터베이스 → 새 데이터베이스 연결 → MariaDB 를 선택하면 아래와 같은 화면이 나타난다.
-![](https://hackmd.io/_uploads/SknesM_sh.png)
+    <img width="817" alt="스크린샷 2023-08-03 오전 3 03 17" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/a9ffd792-7839-4137-bacb-7c00bc1981f6">
 - 여기서 3과정에서 변경한 root의 password를 입력하고 TestConnection을 보내보면 그림과 같이 Connected 되었다는 창이 표시될 것임
+    <img width="814" alt="스크린샷 2023-08-03 오전 3 04 43" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/2c68aef4-e2ef-4565-9f2d-ce7ad9b0e315">
 
 5. 정상적으로 연결되었다면 좌측 DB Navigator에 localhost로 object가 생긴 것을 확인할 수 있다.
-![](https://hackmd.io/_uploads/ryGlAzOi3.png)
+    <img width="1061" alt="스크린샷 2023-08-03 오전 3 17 49" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/5098d16e-f740-4c9a-bf5d-1927284f2be8">
 
-++ 연결이 된지 확인해보고싶다면 Dbeaver → localhost → 우클릭 create NewDB → root계정으로 로그인 한 상태에서 terminal 'show databases;'를 입력하면 추가되어있는 모든 DB를 확인할 수 있다.
-![](https://hackmd.io/_uploads/B1FNlQuj2.png)
+    ++ 연결이 된지 확인해보고싶다면 Dbeaver → localhost → 우클릭 create NewDB → root계정으로 로그인 한 상태에서 terminal 'show databases;'를 입력하면 추가되어있는 모든 DB를 확인할 수 있다.
+   
+    <img width="406" alt="스크린샷 2023-08-03 오전 3 27 52" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/def34487-af16-4327-b0bf-1673fafa2443">
 
-6. 아래를 보면 크게 아래와 같다.
+7. 이 후, Debeaver에서 구성해야할 Table & Colunm을 이해해보자.
 - 두개의 테이블을 구성되어있다.(User, Group)
 - User Table은 id(pk)와 Group Table과의 관계를 나타내기위해 group_id(fk)를 갖는다.
 - Group Table은 id(pk)를 갖는다.
 
-:::info
-:information_source: DB구성 (*: pk, #: fk)
-
-// USER
-|    |Type|
-|:-: |:-:|
-|id(*)|Int|
-|group_id(#)|Int|
-|name|String|
-|image_url|String|
-|description|String|
-
-// GROUP
-|    |Type|
-|:-: |:-:|
-|id(*)|Int|
-|name|String|
-:::
+    information_source: DB구성 (*: pk, #: fk)  
+    // USER
+    |    |Type|
+    |:-: |:-:|
+    |id(*)|Int|
+    |group_id(#)|Int|
+    |name|String|
+    |image_url|String|
+    |description|String|
+    
+    // GROUP
+    |    |Type|
+    |:-: |:-:|
+    |id(*)|Int|
+    |name|String|
 
 7. 두개의 테이블(User, Group) 각각의 column을 생성해주고 PK, FK를 설정하고 Save하자!
 - PK로는 각각 user: id, group: id 로 설정해준다. (constraint에서 우클릭 create new constraint로 생성해주면된다.)
-![](https://hackmd.io/_uploads/HkxnxEdsn.png)
+  
+    <img width="382" alt="스크린샷 2023-08-03 오전 4 37 58" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/5ee6ddb9-e20f-4d94-a484-7edaee831043">
 
+    
 - FK로는 user: group_id에 생성해주면된다.(그림과 같이 아래의 첫번째 그림과 같은 방법으로 추가하면 두번째 그림처럼 추가가된다.)
-![](https://hackmd.io/_uploads/Sy1O-Vush.png)
-![](https://hackmd.io/_uploads/HJdqZNuj2.png)
+  
+    <img width="542" alt="스크린샷 2023-08-03 오전 4 41 15" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/6bedd89b-36a2-4639-ae35-72d3910f5902">
+
+    <img width="1137" alt="스크린샷 2023-08-03 오전 4 41 58" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/44accde8-6e6a-44f6-b206-f260593179c0">
+
 
 - 위 방법으로 정상적으로 마쳤다면 DB구성은 끝났다.
 - DB에서 다이어그램 보기를 선택해보자 그러면 아래와 같이 관계도가 그려질 것이다.
-![](https://hackmd.io/_uploads/H1m7MVOoh.png)
-
-- 
+    <img width="497" alt="스크린샷 2023-08-03 오전 4 43 45" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/3d88ca8a-8318-46f8-b210-c89ededf49fc">
 
 8. 이제는 vapor와 방금 구현해놓은 로컬DB를 연결해줘야한다.
 - 이를 수행하기 위해선 Fluent, FluentMySQL 라이브러리가 필요함.(ORM 객체-관계 매핑 프레임워크)
@@ -147,8 +144,7 @@ public func configure(_ app: Application) async throws {
     - 컬럼3: image_url / Text
     - 컬럼4: description / Text
 - group_id 는 어떻게 처리해줘야하는걸까? 한번 물어보도록하자(일단, null 값으로 체크해준다.)
-
-![](https://hackmd.io/_uploads/SJ-e0Yqsn.png)
+    <img width="873" alt="스크린샷 2023-08-04 오후 11 40 31" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/52f2891c-bdf4-4186-9f68-8e254566b4fa">
 
 ```swift
 final class User: Model, Content {
@@ -208,8 +204,20 @@ func routes(_ app: Application) throws {
 - 정상적으로 요청이루어졌다면 빈 배열값이 반환될 것이다. (왜? 아직 post를 안했으니까)
 - post요청에 대한 handler도 정의해주고 테스트해보자!
     1. 아래 코드를 routes.swift에 정의해주고 project를 build한다.
+    ```swift
+    func routes(_ app: Application) throws {
+        app.get { req async throws in
+            return try await User.query(on: req.db).all()
+        }
+
+        app.post("write") { req async throws -> User in // [!]이 클로저를 탐
+            let newUser = try req.content.decode(User.self)
+            try await newUser.create(on: req.db)
+            return newUser
+        }
+    }
+    ```
     2. 요청의 body에 포함시킬 TestJson을 구성해준다.
-    3. Postman으로 요청해본다. (https://127.0.0.1:8080/write + json 포함하여)
         ```
         {
            "name":"woong",
@@ -217,31 +225,17 @@ func routes(_ app: Application) throws {
            "description":"forTestrequest",
         }
         ```
+    3. Postman으로 요청해본다. (https://127.0.0.1:8080/write + json 포함하여)
     4. 만약 요청이 성공한다면 아래 post코드의 closure를 타게되고 콘솔에 아래와 같이 찍히게 된다.
-    ![](https://hackmd.io/_uploads/S1GO5c5oh.png)
-    5. 그리고나서 다시 URL을 입력하여 DB에 쓰여진 데이터를 Read해보자.
-    ![](https://hackmd.io/_uploads/Hy2395qj2.png)
+    <img width="565" alt="스크린샷 2023-08-05 오전 12 33 52" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/29af2868-a68a-4796-858b-d11a5f36fae4">
 
-```swift
-func routes(_ app: Application) throws {
-    app.get { req async throws in
-        return try await User.query(on: req.db).all()
-    }
-    
-    app.post("write") { req async throws -> User in // [!]이 클로저를 탐
-        let newUser = try req.content.decode(User.self)
-        try await newUser.create(on: req.db)
-        return newUser
-    }
-}
-```
+    5. 그리고나서 다시 URL을 입력하여 DB에 쓰여진 데이터를 Read해보자.    
+    <img width="1441" alt="스크린샷 2023-08-05 오전 12 35 00" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/9a0215aa-f980-40fe-9e54-8b4fb2c73ee5">
 
 이번 스터디로 서버가 어떤 역할을 한다는 것을 완전히 이해할 순 없지만
 앱에서 CRUD를 수행할 때, 
-서버로 HTTP요청으로 GET,POST,PUT,PATCH를 request하고 
-라우팅을 통해서 handler가 정의되며 처리되는거구나! 하는 약간의 감은 오는 것 같다.
-비어있는 개념이 약간은 채워진 느낌
-매주 모르는개념을 익히고 정리하면서 공부해보자.
+서버에 HTTP메서드 GET,POST,PUT,PATCH로 request하고 
+라우팅을 통해서 handler가 정의되며 이것이 반환되는거구나! 하는 약간의 감은 오는 것 같다.
 
 ---
 
@@ -256,8 +250,8 @@ func routes(_ app: Application) throws {
     
     해결
     - group_id의 Not Null을 Null값이 가능하도록 하고 Default를 Null로 구현하였다.(임시방편의 해결책이므로 근본적인 방법을 묻고 찾아보자.)
-    
-![](https://hackmd.io/_uploads/H1x23qcsn.png)
+
+    <img width="830" alt="스크린샷 2023-08-05 오전 12 43 29" src="https://github.com/iOS-Woong/messengerAppStudy/assets/96489602/192eece8-4931-4ff9-9413-a35b4e08d1a1">
 
 ---
 
