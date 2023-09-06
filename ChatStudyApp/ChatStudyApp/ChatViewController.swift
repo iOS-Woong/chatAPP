@@ -11,24 +11,68 @@ import Alamofire
 class ChatViewController: UIViewController {
 
     private let testTextView = UITextView()
+    private let testButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayoutConstratint()
         testTextView.text = "default"
-        socket()
+        getSecretKey()
+        configureTestButton()
+    }
+    
+    private func getSecretKey() {
+        Main.privateKey
+    }
+    
+    private func configureTestButton() {
+        testButton.setTitle("Notification", for: .normal)
+        testButton.setTitleColor(UIColor.black, for: .normal)
+        testButton.backgroundColor = .systemBlue
+        configureButtonAction()
+    }
+    
+    private func configureButtonAction() {
+        let action = UIAction { _ in
+            Task {
+                do {
+                    try await self.pushNotification()
+                } catch {
+                    print(error)
+                }
+            }
+        }
+        
+        testButton.addAction(action, for: .touchUpInside)
+    }
+    
+    private func pushNotification() async throws {
+        try await Main.main()
     }
     
     private func configureLayoutConstratint() {
+        view.backgroundColor = .white
+        
         view.addSubview(testTextView)
+        view.addSubview(testButton)
         
         testTextView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             testTextView.topAnchor.constraint(equalTo: view.topAnchor),
             testTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             testTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            testTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            testTextView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.85),
         ])
+        
+        testButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            testButton.topAnchor.constraint(equalTo: testTextView.bottomAnchor),
+            testButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            testButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            testButton.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        
     }
     
     func request() {

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24DF9BE2A9619370066C5B3 /* WebSocket.swift */; };
+		D263D7A32AA88FE400BBF8C1 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263D7A22AA88FE400BBF8C1 /* Main.swift */; };
+		D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A52AA890ED00BBF8C1 /* APNS */; };
+		D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A72AA890ED00BBF8C1 /* APNSCore */; };
 		D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAF7662A78F40B006AD936 /* AppDelegate.swift */; };
 		D2AAF7692A78F40B006AD936 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */; };
 		D2AAF76B2A78F40B006AD936 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAF76A2A78F40B006AD936 /* ViewController.swift */; };
@@ -26,6 +29,7 @@
 /* Begin PBXFileReference section */
 		D24DF9BE2A9619370066C5B3 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		D24DF9C02A9628E70066C5B3 /* ChatStudyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatStudyApp.entitlements; sourceTree = "<group>"; };
+		D263D7A22AA88FE400BBF8C1 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		D2AAF7632A78F40B006AD936 /* ChatStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAF7662A78F40B006AD936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +51,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B40A382A83B8A10076B5E1 /* Moya in Frameworks */,
+				D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */,
 				D2FFEF8A2A8CE51C00B41DBC /* Alamofire in Frameworks */,
+				D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,7 @@
 				D2B40A3D2A83BC9F0076B5E1 /* Encodable+Ext.swift */,
 				D24DF9BE2A9619370066C5B3 /* WebSocket.swift */,
 				D2B40A302A83B1760076B5E1 /* MockSocket.swift */,
+				D263D7A22AA88FE400BBF8C1 /* Main.swift */,
 			);
 			path = ChatStudyApp;
 			sourceTree = "<group>";
@@ -110,6 +117,8 @@
 			packageProductDependencies = (
 				D2B40A372A83B8A10076B5E1 /* Moya */,
 				D2FFEF892A8CE51C00B41DBC /* Alamofire */,
+				D263D7A52AA890ED00BBF8C1 /* APNS */,
+				D263D7A72AA890ED00BBF8C1 /* APNSCore */,
 			);
 			productName = ChatStudyApp;
 			productReference = D2AAF7632A78F40B006AD936 /* ChatStudyApp.app */;
@@ -142,6 +151,7 @@
 			packageReferences = (
 				D2B40A362A83B8A10076B5E1 /* XCRemoteSwiftPackageReference "Moya" */,
 				D2FFEF882A8CE51C00B41DBC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */,
 			);
 			productRefGroup = D2AAF7642A78F40B006AD936 /* Products */;
 			projectDirPath = "";
@@ -171,6 +181,7 @@
 			files = (
 				D2AAF76B2A78F40B006AD936 /* ViewController.swift in Sources */,
 				D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */,
+				D263D7A32AA88FE400BBF8C1 /* Main.swift in Sources */,
 				D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */,
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+Ext.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
@@ -392,6 +403,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-server-community/APNSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		D2B40A362A83B8A10076B5E1 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -411,6 +430,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D263D7A52AA890ED00BBF8C1 /* APNS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */;
+			productName = APNS;
+		};
+		D263D7A72AA890ED00BBF8C1 /* APNSCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */;
+			productName = APNSCore;
+		};
 		D2B40A372A83B8A10076B5E1 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D2B40A362A83B8A10076B5E1 /* XCRemoteSwiftPackageReference "Moya" */;
