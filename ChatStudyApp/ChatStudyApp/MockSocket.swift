@@ -7,11 +7,30 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 // 1.소켓
 
+struct Certificates {
+    static let certificate: SecCertificate = Certificates.certificate(filename: "certificateFileName")
+
+    private static func certificate(filename: String) -> SecCertificate {
+        let filePath = Bundle.main.path(forResource: filename, ofType: "cer") ?? ""
+        let data = try! Data(contentsOf: URL(fileURLWithPath: filePath))
+        let certificate = SecCertificateCreateWithData(nil, data as CFData)!
+        return certificate
+  }
+}
+
 final class MockSocket {
-    let provider = MoyaProvider<DefaultAPI>()
+    
+    let session = Session(
+        configuration: URLSessionConfiguration.default,
+        startRequestsImmediately: false,
+        serverTrustManager: ServerTrustManager(allHostsMustBeEvaluated: false, evaluators: ["https://127.0.0.1:8080": PinnedCertificatesTrustEvaluator()])
+    )
+    
+    lazy var provider = MoyaProvider<DefaultAPI>(session: session)
     
     func requestGet() {
         provider.request(.get) { result in

@@ -8,15 +8,41 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
 
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current()
+          .requestAuthorization(options: authOptions, completionHandler: { _, _ in})
+        UNUserNotificationCenter.current().delegate = self
+        application.registerForRemoteNotifications()
+        
+        
         return true
     }
 
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification,withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+           completionHandler([.banner, .sound])
+       }
+
+       func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse,withCompletionHandler completionHandler: @escaping () -> Void) {
+           completionHandler()
+       }
+
+       func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+           let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+           print("token = \(token)")
+       }
+
+       func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+          print("apns Error \(error)")
+       }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
