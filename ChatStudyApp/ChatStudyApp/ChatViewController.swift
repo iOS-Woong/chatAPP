@@ -17,12 +17,7 @@ class ChatViewController: UIViewController {
         super.viewDidLoad()
         configureLayoutConstratint()
         testTextView.text = "default"
-        getSecretKey()
         configureTestButton()
-    }
-    
-    private func getSecretKey() {
-        Main.privateKey
     }
     
     private func configureTestButton() {

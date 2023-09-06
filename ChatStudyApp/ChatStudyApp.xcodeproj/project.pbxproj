@@ -17,7 +17,6 @@
 		D2AAF7702A78F40E006AD936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AAF76F2A78F40E006AD936 /* Assets.xcassets */; };
 		D2AAF7732A78F40E006AD936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */; };
 		D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */; };
-		D2B40A312A83B1760076B5E1 /* MockSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A302A83B1760076B5E1 /* MockSocket.swift */; };
 		D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A322A83B4A10076B5E1 /* Entity.swift */; };
 		D2B40A382A83B8A10076B5E1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D2B40A372A83B8A10076B5E1 /* Moya */; };
 		D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */; };
@@ -38,7 +37,6 @@
 		D2AAF7722A78F40E006AD936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AAF7742A78F40E006AD936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		D2B40A302A83B1760076B5E1 /* MockSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSocket.swift; sourceTree = "<group>"; };
 		D2B40A322A83B4A10076B5E1 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
 				D2B40A3D2A83BC9F0076B5E1 /* Encodable+Ext.swift */,
 				D24DF9BE2A9619370066C5B3 /* WebSocket.swift */,
-				D2B40A302A83B1760076B5E1 /* MockSocket.swift */,
 				D263D7A22AA88FE400BBF8C1 /* Main.swift */,
 			);
 			path = ChatStudyApp;
@@ -188,7 +185,6 @@
 				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
 				D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */,
 				D2AAF7692A78F40B006AD936 /* SceneDelegate.swift in Sources */,
-				D2B40A312A83B1760076B5E1 /* MockSocket.swift in Sources */,
 				D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
