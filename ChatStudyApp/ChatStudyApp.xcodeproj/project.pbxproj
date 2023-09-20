@@ -61,6 +61,7 @@
 		D2629A3A2ABAF1F70006CEF5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D2629A432ABAF2E90006CEF5 /* Network */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -75,8 +76,74 @@
 		D2629A3C2ABAF2130006CEF5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D2629A3D2ABAF25A0006CEF5 /* FriendListView */,
+				D2629A3E2ABAF27B0006CEF5 /* ChatView */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D2629A3D2ABAF25A0006CEF5 /* FriendListView */ = {
+			isa = PBXGroup;
+			children = (
+				D2629A402ABAF2B60006CEF5 /* View */,
+			);
+			path = FriendListView;
+			sourceTree = "<group>";
+		};
+		D2629A3E2ABAF27B0006CEF5 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				D2629A3F2ABAF29D0006CEF5 /* View */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		D2629A3F2ABAF29D0006CEF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2629A402ABAF2B60006CEF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAF76A2A78F40B006AD936 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2629A412ABAF2D30006CEF5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D2629A422ABAF2DD0006CEF5 /* Extension */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D2629A422ABAF2DD0006CEF5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D2629A432ABAF2E90006CEF5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D2629A442ABAF2FA0006CEF5 /* RequestModel */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D2629A442ABAF2FA0006CEF5 /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */,
+			);
+			path = RequestModel;
 			sourceTree = "<group>";
 		};
 		D2AAF75A2A78F40B006AD936 = {
@@ -98,21 +165,18 @@
 		D2AAF7652A78F40B006AD936 /* ChatStudyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D24DF9C02A9628E70066C5B3 /* ChatStudyApp.entitlements */,
+				D2629A412ABAF2D30006CEF5 /* Common */,
 				D2629A3C2ABAF2130006CEF5 /* Presentation */,
 				D2629A3B2ABAF20A0006CEF5 /* Domain */,
 				D2629A3A2ABAF1F70006CEF5 /* Data */,
-				D24DF9C02A9628E70066C5B3 /* ChatStudyApp.entitlements */,
 				D2AAF7662A78F40B006AD936 /* AppDelegate.swift */,
 				D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */,
-				D2AAF76A2A78F40B006AD936 /* ViewController.swift */,
-				D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */,
 				D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */,
-				D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */,
 				D2B40A322A83B4A10076B5E1 /* Entity.swift */,
 				D2AAF76F2A78F40E006AD936 /* Assets.xcassets */,
 				D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */,
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
-				D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */,
 				D24DF9BE2A9619370066C5B3 /* WebSocket.swift */,
 				D263D7A22AA88FE400BBF8C1 /* Main.swift */,
 			);
