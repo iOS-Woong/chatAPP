@@ -6,92 +6,55 @@
 //
 
 import UIKit
-import Alamofire
 
 class ChatViewController: UIViewController {
-
-    private let testTextView = UITextView()
-    private let testButton = UIButton()
+    private let sendButton: UIButton = UIButton(frame: .zero)
+    let webSocket = WebSocket.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureLayoutConstratint()
-        testTextView.text = "default"
-        configureTestButton()
-    }
-    
-    private func configureTestButton() {
-        testButton.setTitle("Notification", for: .normal)
-        testButton.setTitleColor(UIColor.black, for: .normal)
-        testButton.backgroundColor = .systemBlue
-        configureButtonAction()
-    }
-    
-    private func configureButtonAction() {
-        let action = UIAction { _ in
-            Task {
-                do {
-                    try await self.pushNotification()
-                } catch {
-                    print(error)
-                }
-            }
-        }
-        
-        testButton.addAction(action, for: .touchUpInside)
-    }
-    
-    private func pushNotification() async throws {
-        try await Main.main()
-    }
-    
-    private func configureLayoutConstratint() {
+        socket()
+        setupViews()
+        configureButton()
+        sendButtonAction()
         view.backgroundColor = .white
-        
-        view.addSubview(testTextView)
-        view.addSubview(testButton)
-        
-        testTextView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            testTextView.topAnchor.constraint(equalTo: view.topAnchor),
-            testTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            testTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            testTextView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.85),
-        ])
-        
-        testButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            testButton.topAnchor.constraint(equalTo: testTextView.bottomAnchor),
-            testButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            testButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            testButton.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-        
-        
-    }
-    
-    func request() {
-        let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
-        
-        let url = URL(string: "https://127.0.0.1:8080")!
-        let request = URLRequest(url: url)
-        
-        session.dataTask(with: request) { data, response, error in
-            print(data, response, error)
-        }.resume()
     }
     
     func socket() {
-        let webSocket = WebSocket.shared
-        
         try? webSocket.openWebSocket()
         webSocket.delegate = self
+        
         webSocket.onReceiveClosure = { (string, data) in
             print(string, data)
         }
-        
-        webSocket.send(message: "hello world")
     }
+    
+    private func configureButton() {
+        sendButton.backgroundColor = .systemBlue
+        sendButton.setTitle("Send", for: .normal)
+        sendButton.setTitleColor(.black, for: .normal)
+    }
+    
+    private func setupViews() {
+        view.addSubview(sendButton)
+        
+        sendButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            sendButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
+            sendButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1),
+            sendButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            sendButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    private func sendButtonAction() {
+        let action = UIAction { [weak self] _ in
+            self?.webSocket.send(message: "hello world")
+        }
+        
+        sendButton.addAction(action, for: .touchUpInside)
+    }
+    
 }
 
 extension ChatViewController: URLSessionWebSocketDelegate {
