@@ -21,7 +21,7 @@
 		D2B40A382A83B8A10076B5E1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D2B40A372A83B8A10076B5E1 /* Moya */; };
 		D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */; };
 		D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */; };
-		D2B40A3E2A83BC9F0076B5E1 /* Encodable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3D2A83BC9F0076B5E1 /* Encodable+Ext.swift */; };
+		D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */; };
 		D2FFEF8A2A8CE51C00B41DBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2FFEF892A8CE51C00B41DBC /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		D2B40A322A83B4A10076B5E1 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
-		D2B40A3D2A83BC9F0076B5E1 /* Encodable+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Ext.swift"; sourceTree = "<group>"; };
+		D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2629A3A2ABAF1F70006CEF5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D2629A3B2ABAF20A0006CEF5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D2629A3C2ABAF2130006CEF5 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		D2AAF75A2A78F40B006AD936 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +98,9 @@
 		D2AAF7652A78F40B006AD936 /* ChatStudyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D2629A3C2ABAF2130006CEF5 /* Presentation */,
+				D2629A3B2ABAF20A0006CEF5 /* Domain */,
+				D2629A3A2ABAF1F70006CEF5 /* Data */,
 				D24DF9C02A9628E70066C5B3 /* ChatStudyApp.entitlements */,
 				D2AAF7662A78F40B006AD936 /* AppDelegate.swift */,
 				D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */,
@@ -88,7 +112,7 @@
 				D2AAF76F2A78F40E006AD936 /* Assets.xcassets */,
 				D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */,
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
-				D2B40A3D2A83BC9F0076B5E1 /* Encodable+Ext.swift */,
+				D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */,
 				D24DF9BE2A9619370066C5B3 /* WebSocket.swift */,
 				D263D7A22AA88FE400BBF8C1 /* Main.swift */,
 			);
@@ -180,7 +204,7 @@
 				D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */,
 				D263D7A32AA88FE400BBF8C1 /* Main.swift in Sources */,
 				D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */,
-				D2B40A3E2A83BC9F0076B5E1 /* Encodable+Ext.swift in Sources */,
+				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
 				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
 				D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */,
