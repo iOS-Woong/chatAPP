@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24DF9BE2A9619370066C5B3 /* WebSocket.swift */; };
 		D2629A472ABAF3AF0006CEF5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */; };
+		D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */; };
 		D263D7A32AA88FE400BBF8C1 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D263D7A22AA88FE400BBF8C1 /* Main.swift */; };
 		D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A52AA890ED00BBF8C1 /* APNS */; };
 		D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A72AA890ED00BBF8C1 /* APNSCore */; };
@@ -30,6 +31,7 @@
 		D24DF9BE2A9619370066C5B3 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
 		D24DF9C02A9628E70066C5B3 /* ChatStudyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatStudyApp.entitlements; sourceTree = "<group>"; };
 		D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkRepository.swift; sourceTree = "<group>"; };
 		D263D7A22AA88FE400BBF8C1 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		D2AAF7632A78F40B006AD936 /* ChatStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAF7662A78F40B006AD936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		D2629A432ABAF2E90006CEF5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D2629A482ABAF5050006CEF5 /* Repository */,
 				D2629A442ABAF2FA0006CEF5 /* RequestModel */,
 				D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */,
 			);
@@ -147,6 +150,14 @@
 				D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */,
 			);
 			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		D2629A482ABAF5050006CEF5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		D2AAF75A2A78F40B006AD936 = {
@@ -275,6 +286,7 @@
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
 				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
+				D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */,
 				D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */,
 				D2AAF7692A78F40B006AD936 /* SceneDelegate.swift in Sources */,
 				D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */,
