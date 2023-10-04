@@ -13,11 +13,49 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        socket()
+//        socket()
         setupViews()
         configureButton()
         sendButtonAction()
         view.backgroundColor = .white
+        requestPOST()
+    }
+    
+    func request() {
+        let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+        
+        let url = URL(string: "https://127.0.0.1:8080")!
+        let request = URLRequest(url: url)
+        
+        session.dataTask(with: request) { data, response, error in
+            print(data)
+        }.resume()
+    }
+    
+    func requestPOST() {
+        let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+        
+        let url = URL(string: "https://127.0.0.1:8080/user_register")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        
+        let userToBeAdded = [
+            "name": "woong",
+            "imageUrl": "https://example.com/image.jpg",
+            "userDescription": "설명입니다"
+        ]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: userToBeAdded, options: [])
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        } catch {
+            print(error.localizedDescription)
+            return
+        }
+        
+        session.dataTask(with: request) { data, response, error in
+            print(String(data: data!, encoding: .utf8))
+        }.resume()
     }
     
     func socket() {
@@ -58,21 +96,31 @@ class ChatViewController: UIViewController {
 }
 
 extension ChatViewController: URLSessionWebSocketDelegate {
-    func urlSession(
-        _ session: URLSession,
-        webSocketTask: URLSessionWebSocketTask,
-        didOpenWithProtocol protocol: String?)
-    {
-        print("OPEN")
-    }
+//    func urlSession(
+//        _ session: URLSession,
+//        webSocketTask: URLSessionWebSocketTask,
+//        didOpenWithProtocol protocol: String?)
+//    {
+//        print("OPEN")
+//    }
+//
+//    func urlSession(
+//        _ session: URLSession,
+//        webSocketTask: URLSessionWebSocketTask,
+//        didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
+//        reason: Data?)
+//    {
+//        print("CLOSE")
+//    }
     
     func urlSession(
         _ session: URLSession,
-        webSocketTask: URLSessionWebSocketTask,
-        didCloseWith closeCode: URLSessionWebSocketTask.CloseCode,
-        reason: Data?)
+        didReceive challenge: URLAuthenticationChallenge,
+        completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?)
+        -> Void)
     {
-        print("CLOSE")
+        completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
     }
+    
     
 }
