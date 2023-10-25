@@ -18,10 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let friendListViewModel = FriendListViewModel()
         let viewController = FriendListViewController(viewModel: friendListViewModel)
+        
         self.window = window
-
+        openWebSocket()
         window.rootViewController = viewController        
         window.makeKeyAndVisible()
+    }
+    
+    private func openWebSocket() {
+        let webSocket = WebSocket.shared
+        
+        do {
+            try webSocket.openWebSocket()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 
