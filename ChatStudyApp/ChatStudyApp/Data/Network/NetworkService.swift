@@ -18,11 +18,11 @@ enum NetworkError: Error {
 final class NetworkService {
     func request(
         _ request: URLRequest?,
-        completion: @escaping (Result<Data, NetworkError>) -> Void
-    ) -> URLSessionTask? {
+        completion: @escaping (Result<Data, NetworkError>) -> Void)
+    {
         guard let request else {
             completion(.failure(.invalidURL))
-            return nil
+            return
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -49,7 +49,5 @@ final class NetworkService {
             completion(.success(data))
         }
         task.resume()
-        
-        return task
     }
 }
