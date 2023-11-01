@@ -30,8 +30,6 @@ class FriendListViewController: UIViewController {
         configureCollectionViewAttributes()
         configureHierarchy()
         configureLayout()
-//        request() // For test
-//        requestPOST() // For test
         viewModel.getAllUserDetails()
     }
     
