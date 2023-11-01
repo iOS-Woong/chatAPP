@@ -8,24 +8,24 @@
 import Foundation
 
 final class FriendListViewModel {
-    let mock = [
-        User(id: 0, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 1, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 2, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 3, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-        User(id: 4, name: "서현웅", group: nil, imageUrl: "www.example.com", userDescription: "안녕하세요"),
-    ]
+    
+    private let networkUsecase = DefaultNetworkUsecase()
+    
+    var didChangeUsers: (() -> Void)?
+    var users: [User] = [User]() {
+        didSet {
+            didChangeUsers?()
+        }
+    }
+    
+    func getAllUserDetails() {
+        networkUsecase.getAllUserDetails { result in
+            switch result {
+            case .success(let users):
+                self.users = users
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

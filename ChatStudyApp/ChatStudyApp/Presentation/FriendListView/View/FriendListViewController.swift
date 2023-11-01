@@ -25,13 +25,25 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind()
         configureCollectionViewLayout()
         configureCollectionViewAttributes()
         configureHierarchy()
         configureLayout()
+//        request() // For test
+//        requestPOST() // For test
+        viewModel.getAllUserDetails()
     }
     
     // MARK: Private
+    
+    private func bind() {
+        viewModel.didChangeUsers = {
+            DispatchQueue.main.async {
+                self.friendListCollectionView.reloadData()
+            }
+        }
+    }
     
     private func configureCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
@@ -50,7 +62,6 @@ class FriendListViewController: UIViewController {
             FriendCollectionViewCell.self,
             forCellWithReuseIdentifier: FriendCollectionViewCell.identifier)
         friendListCollectionView.dataSource = self
-        friendListCollectionView.delegate = self
     }
     
     private func configureHierarchy() {
@@ -72,15 +83,15 @@ extension FriendListViewController: UICollectionViewDataSource {
     func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int)
-        -> Int
+    -> Int
     {
-        return viewModel.mock.count
+        return viewModel.users.count
     }
     
     func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath)
-        -> UICollectionViewCell
+    -> UICollectionViewCell
     {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: FriendCollectionViewCell.identifier,
@@ -88,12 +99,38 @@ extension FriendListViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configure(user: viewModel.mock[indexPath.row])
+        cell.configure(user: viewModel.users[indexPath.row])
         
         return cell
     }
 }
 
-extension FriendListViewController: UICollectionViewDelegate {
-    
-}
+/*
+ 
+ // 임시
+ func requestPOST() {
+     let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+     
+     let url = URL(string: "https://127.0.0.1:8080/user_register")!
+     var request = URLRequest(url: url)
+     request.httpMethod = "POST"
+     
+     let userToBeAdded = [
+         "name": "woong23Test",
+         "imageUrl": "https://example.com/image.jpg",
+         "userDescription": "설명입니다"
+     ]
+     
+     do {
+         request.httpBody = try JSONSerialization.data(withJSONObject: userToBeAdded, options: [])
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+     } catch {
+         print(error.localizedDescription)
+         return
+     }
+     
+     session.dataTask(with: request) { data, response, error in
+         print(String(data: data!, encoding: .utf8))
+     }.resume()
+ }
+ */
