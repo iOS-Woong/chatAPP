@@ -58,13 +58,13 @@ class FriendCollectionViewCell: UICollectionViewCell {
     }
     
     private func configureNameLabel() {
-        nameLabel.textColor = .white
+        nameLabel.textColor = .black
         nameLabel.textAlignment = .left
         nameLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
     }
     
     private func configureStateMessageLabel() {
-        stateMessageLabel.textColor = .white
+        stateMessageLabel.textColor = .black
         stateMessageLabel.textAlignment = .left
         stateMessageLabel.font = UIFont.systemFont(ofSize: 11, weight: .regular)
     }

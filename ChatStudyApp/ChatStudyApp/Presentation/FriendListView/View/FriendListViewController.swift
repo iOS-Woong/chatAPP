@@ -26,6 +26,7 @@ class FriendListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind()
+        configureNavigation()
         configureCollectionViewLayout()
         configureCollectionViewAttributes()
         configureHierarchy()
@@ -43,6 +44,10 @@ class FriendListViewController: UIViewController {
         }
     }
     
+    private func configureNavigation() {
+        title = "ChatList"
+    }
+    
     private func configureCollectionViewLayout() {
         let layout = UICollectionViewFlowLayout()
         
@@ -53,7 +58,7 @@ class FriendListViewController: UIViewController {
     }
     
     private func configureCollectionViewAttributes() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         friendListCollectionView.backgroundColor = .clear
         friendListCollectionView.register(
