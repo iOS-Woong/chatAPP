@@ -15,7 +15,7 @@ enum NetworkError: Error {
     case invalidURL
 }
 
-final class NetworkService {
+final class NetworkService: NSObject {
     func request(
         _ request: URLRequest?,
         completion: @escaping (Result<Data, NetworkError>) -> Void)
@@ -25,7 +25,9 @@ final class NetworkService {
             return
         }
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+        
+        let task = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
                 completion(.failure(.invalidRequest))
                 return
@@ -49,5 +51,16 @@ final class NetworkService {
             completion(.success(data))
         }
         task.resume()
+    }
+}
+
+extension NetworkService: URLSessionWebSocketDelegate {
+    func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        didReceive challenge: URLAuthenticationChallenge,
+        completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void)
+    {
+        completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
     }
 }
