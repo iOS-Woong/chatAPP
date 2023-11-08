@@ -25,7 +25,10 @@
 		D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */; };
 		D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */; };
 		D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */; };
-		D2EA3ADB2AC44DE3009686D8 /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2EA3ADA2AC44DE3009686D8 /* UserGroup.swift */; };
+		D2E4C8722AD6C4D7005AEE42 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8712AD6C4D7005AEE42 /* ImageManager.swift */; };
+		D2E4C8752AF278F9005AEE42 /* DefaultNetworkUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */; };
+		D2E4C8782AF27D64005AEE42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8772AF27D64005AEE42 /* User.swift */; };
+		D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8792AF27D7E005AEE42 /* Group.swift */; };
 		D2FFEF8A2A8CE51C00B41DBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2FFEF892A8CE51C00B41DBC /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +51,10 @@
 		D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
 		D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
-		D2EA3ADA2AC44DE3009686D8 /* UserGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroup.swift; sourceTree = "<group>"; };
+		D2E4C8712AD6C4D7005AEE42 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkUsecase.swift; sourceTree = "<group>"; };
+		D2E4C8772AF27D64005AEE42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D2E4C8792AF27D7E005AEE42 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		D2629A3B2ABAF20A0006CEF5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				D2E4C8762AF27D57005AEE42 /* Entity */,
+				D2E4C8732AF27826005AEE42 /* Usecase */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -84,19 +92,19 @@
 		D2629A3C2ABAF2130006CEF5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				D2629A3D2ABAF25A0006CEF5 /* FriendListView */,
+				D2629A3D2ABAF25A0006CEF5 /* FriendList */,
 				D2629A3E2ABAF27B0006CEF5 /* ChatView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
 		};
-		D2629A3D2ABAF25A0006CEF5 /* FriendListView */ = {
+		D2629A3D2ABAF25A0006CEF5 /* FriendList */ = {
 			isa = PBXGroup;
 			children = (
 				D2629A402ABAF2B60006CEF5 /* View */,
 				D2629A4B2ABB15DC0006CEF5 /* ViewModel */,
 			);
-			path = FriendListView;
+			path = FriendList;
 			sourceTree = "<group>";
 		};
 		D2629A3E2ABAF27B0006CEF5 /* ChatView */ = {
@@ -214,9 +222,26 @@
 				D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */,
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
 				D24DF9BE2A9619370066C5B3 /* WebSocket.swift */,
-				D2EA3ADA2AC44DE3009686D8 /* UserGroup.swift */,
+				D2E4C8712AD6C4D7005AEE42 /* ImageManager.swift */,
 			);
 			path = ChatStudyApp;
+			sourceTree = "<group>";
+		};
+		D2E4C8732AF27826005AEE42 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+				D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */,
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		D2E4C8762AF27D57005AEE42 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D2E4C8772AF27D64005AEE42 /* User.swift */,
+				D2E4C8792AF27D7E005AEE42 /* Group.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,13 +331,16 @@
 				D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */,
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
+				D2E4C8722AD6C4D7005AEE42 /* ImageManager.swift in Sources */,
+				D2E4C8782AF27D64005AEE42 /* User.swift in Sources */,
 				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
+				D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */,
 				D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */,
 				D2629A4D2ABB15F50006CEF5 /* FriendListViewModel.swift in Sources */,
 				D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */,
 				D294A2992ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift in Sources */,
 				D2AAF7692A78F40B006AD936 /* SceneDelegate.swift in Sources */,
-				D2EA3ADB2AC44DE3009686D8 /* UserGroup.swift in Sources */,
+				D2E4C8752AF278F9005AEE42 /* DefaultNetworkUsecase.swift in Sources */,
 				D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
