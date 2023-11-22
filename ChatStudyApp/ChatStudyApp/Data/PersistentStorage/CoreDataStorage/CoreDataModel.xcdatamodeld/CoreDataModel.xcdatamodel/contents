@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22A400" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ChatEntity" representedClassName="ChatEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="chatID" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="createDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" attributeType="String"/>
+        <attribute name="timestamp" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="type" attributeType="String"/>
+        <relationship name="chat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatRoomEntity" inverseName="chats" inverseEntity="ChatRoomEntity"/>
+    </entity>
+    <entity name="ChatRoomEntity" representedClassName="ChatRoomEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="lastChatDate" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="roomID" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="roomType" attributeType="String"/>
+        <attribute name="url" attributeType="String"/>
+        <relationship name="chats" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ChatEntity" inverseName="chat" inverseEntity="ChatEntity"/>
+        <relationship name="senders" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="chat" inverseEntity="UserEntity"/>
+    </entity>
+    <entity name="GroupEntity" representedClassName="GroupEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity" inverseName="groupID" inverseEntity="UserEntity"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="userDescription" attributeType="String"/>
+        <relationship name="chat" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChatRoomEntity" inverseName="senders" inverseEntity="ChatRoomEntity"/>
+        <relationship name="groupID" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupEntity" inverseName="user" inverseEntity="GroupEntity"/>
+    </entity>
+</model>
