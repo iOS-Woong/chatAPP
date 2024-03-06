@@ -25,7 +25,6 @@
 		D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */; };
 		D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */; };
 		D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */; };
-		D2E4C8722AD6C4D7005AEE42 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8712AD6C4D7005AEE42 /* ImageManager.swift */; };
 		D2E4C8752AF278F9005AEE42 /* DefaultNetworkUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */; };
 		D2E4C8782AF27D64005AEE42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8772AF27D64005AEE42 /* User.swift */; };
 		D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8792AF27D7E005AEE42 /* Group.swift */; };
@@ -51,7 +50,6 @@
 		D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
 		D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
-		D2E4C8712AD6C4D7005AEE42 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkUsecase.swift; sourceTree = "<group>"; };
 		D2E4C8772AF27D64005AEE42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D2E4C8792AF27D7E005AEE42 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 				D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */,
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
 				D24DF9BE2A9619370066C5B3 /* WebSocket.swift */,
-				D2E4C8712AD6C4D7005AEE42 /* ImageManager.swift */,
 			);
 			path = ChatStudyApp;
 			sourceTree = "<group>";
@@ -331,7 +328,6 @@
 				D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */,
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
-				D2E4C8722AD6C4D7005AEE42 /* ImageManager.swift in Sources */,
 				D2E4C8782AF27D64005AEE42 /* User.swift in Sources */,
 				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
 				D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */,
