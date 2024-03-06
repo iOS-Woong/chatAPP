@@ -94,46 +94,46 @@ class ChatViewController: UIViewController {
     }
     
     private func setupMessagesCollectionViewAttributes() {
-        messagesCollectionView.messagesDataSource = self
-        messagesCollectionView.messagesDisplayDelegate = self
-        messagesCollectionView.messagesLayoutDelegate = self
+//        messagesCollectionView.messagesDataSource = self
+//        messagesCollectionView.messagesDisplayDelegate = self
+//        messagesCollectionView.messagesLayoutDelegate = self
 //        customizeMessagesCollectionViewLayout()
 //        cellResistration()
 //        configureMessagesCollectionViewBackgroundColor()
-        messagesCollectionView.reloadData()
+//        messagesCollectionView.reloadData()
     }
 }
 
 // MARK: MesagesDataSource
 
-extension ChatViewController: MessagesDataSource {
-    var currentSender: MessageKit.SenderType {
-        return TestSender(senderId: "0", displayName: "me")
-    }
-    
-    func messageForItem(
-        at indexPath: IndexPath,
-        in messagesCollectionView: MessageKit.MessagesCollectionView)
-        -> MessageKit.MessageType
-    {
-        return TestMessage(sender: TestSender(senderId: "dd", displayName: "hi"), messageId: "hi", sentDate: Date(), kind: .text("안녕"))
-    }
-    
-    func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int
-    {
-        return 1
-    }
-}
-
-// MARK: MessagesDisplayDelegate
-
-extension ChatViewController: MessagesDisplayDelegate {
-}
-
-// MARK: MessagesLayoutDelegate
-
-extension ChatViewController: MessagesLayoutDelegate {
-}
+//extension ChatViewController: MessagesDataSource {
+//    var currentSender: MessageKit.SenderType {
+//        return TestSender(senderId: "0", displayName: "me")
+//    }
+//    
+//    func messageForItem(
+//        at indexPath: IndexPath,
+//        in messagesCollectionView: MessageKit.MessagesCollectionView)
+//        -> MessageKit.MessageType
+//    {
+//        return TestMessage(sender: TestSender(senderId: "dd", displayName: "hi"), messageId: "hi", sentDate: Date(), kind: .text("안녕"))
+//    }
+//    
+//    func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int
+//    {
+//        return 1
+//    }
+//}
+//
+//// MARK: MessagesDisplayDelegate
+//
+//extension ChatViewController: MessagesDisplayDelegate {
+//}
+//
+//// MARK: MessagesLayoutDelegate
+//
+//extension ChatViewController: MessagesLayoutDelegate {
+//}
 
 extension ChatViewController: URLSessionWebSocketDelegate {
 //    func urlSession(
