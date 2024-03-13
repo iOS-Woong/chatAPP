@@ -11,6 +11,19 @@
 		D2629A472ABAF3AF0006CEF5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */; };
 		D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */; };
 		D2629A4D2ABB15F50006CEF5 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A4C2ABB15F50006CEF5 /* FriendListViewModel.swift */; };
+		D2639B152BA1C12B00110F60 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B142BA1C12A00110F60 /* Dictionary+Extension.swift */; };
+		D2639B172BA1C24A00110F60 /* ChatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B162BA1C24A00110F60 /* ChatType.swift */; };
+		D2639B192BA1C27700110F60 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B182BA1C27700110F60 /* ErrorType.swift */; };
+		D2639B1B2BA1C27F00110F60 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B1A2BA1C27E00110F60 /* Model.swift */; };
+		D2639B232BA1C28A00110F60 /* APIRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B1D2BA1C28A00110F60 /* APIRequester.swift */; };
+		D2639B242BA1C28A00110F60 /* API.RequsetModel.SendChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B1F2BA1C28A00110F60 /* API.RequsetModel.SendChat.swift */; };
+		D2639B252BA1C28A00110F60 /* API.ResponseModel.ResponseChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B212BA1C28A00110F60 /* API.ResponseModel.ResponseChat.swift */; };
+		D2639B262BA1C28A00110F60 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B222BA1C28A00110F60 /* API.swift */; };
+		D2639B2D2BA1C29800110F60 /* Model.ServiceModel.Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B282BA1C29800110F60 /* Model.ServiceModel.Chat.swift */; };
+		D2639B2E2BA1C29800110F60 /* Model.ServiceModel.Sender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B292BA1C29800110F60 /* Model.ServiceModel.Sender.swift */; };
+		D2639B2F2BA1C29800110F60 /* Model.ServiceModel.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B2A2BA1C29800110F60 /* Model.ServiceModel.Group.swift */; };
+		D2639B302BA1C29800110F60 /* Model.ServiceModel.User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B2B2BA1C29800110F60 /* Model.ServiceModel.User.swift */; };
+		D2639B312BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B2C2BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift */; };
 		D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A52AA890ED00BBF8C1 /* APNS */; };
 		D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A72AA890ED00BBF8C1 /* APNSCore */; };
 		D294A2992ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D294A2982ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift */; };
@@ -37,6 +50,19 @@
 		D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkRepository.swift; sourceTree = "<group>"; };
 		D2629A4C2ABB15F50006CEF5 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
+		D2639B142BA1C12A00110F60 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		D2639B162BA1C24A00110F60 /* ChatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatType.swift; sourceTree = "<group>"; };
+		D2639B182BA1C27700110F60 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		D2639B1A2BA1C27E00110F60 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D2639B1D2BA1C28A00110F60 /* APIRequester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequester.swift; sourceTree = "<group>"; };
+		D2639B1F2BA1C28A00110F60 /* API.RequsetModel.SendChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.RequsetModel.SendChat.swift; sourceTree = "<group>"; };
+		D2639B212BA1C28A00110F60 /* API.ResponseModel.ResponseChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.ResponseModel.ResponseChat.swift; sourceTree = "<group>"; };
+		D2639B222BA1C28A00110F60 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		D2639B282BA1C29800110F60 /* Model.ServiceModel.Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.ServiceModel.Chat.swift; sourceTree = "<group>"; };
+		D2639B292BA1C29800110F60 /* Model.ServiceModel.Sender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.ServiceModel.Sender.swift; sourceTree = "<group>"; };
+		D2639B2A2BA1C29800110F60 /* Model.ServiceModel.Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.ServiceModel.Group.swift; sourceTree = "<group>"; };
+		D2639B2B2BA1C29800110F60 /* Model.ServiceModel.User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.ServiceModel.User.swift; sourceTree = "<group>"; };
+		D2639B2C2BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.ServiceModel.ChatRoom.swift; sourceTree = "<group>"; };
 		D294A2982ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2AAF7632A78F40B006AD936 /* ChatStudyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatStudyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAF7662A78F40B006AD936 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +167,7 @@
 		D2629A422ABAF2DD0006CEF5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D2639B142BA1C12A00110F60 /* Dictionary+Extension.swift */,
 				D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */,
 			);
 			path = Extension;
@@ -178,6 +205,45 @@
 				D2629A4C2ABB15F50006CEF5 /* FriendListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D2639B1C2BA1C28A00110F60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D2639B1D2BA1C28A00110F60 /* APIRequester.swift */,
+				D2639B1E2BA1C28A00110F60 /* RequestModel */,
+				D2639B202BA1C28A00110F60 /* ResponseModel */,
+				D2639B222BA1C28A00110F60 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D2639B1E2BA1C28A00110F60 /* RequestModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2639B1F2BA1C28A00110F60 /* API.RequsetModel.SendChat.swift */,
+			);
+			path = RequestModel;
+			sourceTree = "<group>";
+		};
+		D2639B202BA1C28A00110F60 /* ResponseModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2639B212BA1C28A00110F60 /* API.ResponseModel.ResponseChat.swift */,
+			);
+			path = ResponseModel;
+			sourceTree = "<group>";
+		};
+		D2639B272BA1C29800110F60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D2639B282BA1C29800110F60 /* Model.ServiceModel.Chat.swift */,
+				D2639B292BA1C29800110F60 /* Model.ServiceModel.Sender.swift */,
+				D2639B2A2BA1C29800110F60 /* Model.ServiceModel.Group.swift */,
+				D2639B2B2BA1C29800110F60 /* Model.ServiceModel.User.swift */,
+				D2639B2C2BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		D294A2972ACD7D8400EADFC0 /* Cell */ = {
@@ -235,6 +301,11 @@
 		D2E4C8762AF27D57005AEE42 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D2639B272BA1C29800110F60 /* Service */,
+				D2639B1C2BA1C28A00110F60 /* API */,
+				D2639B1A2BA1C27E00110F60 /* Model.swift */,
+				D2639B182BA1C27700110F60 /* ErrorType.swift */,
+				D2639B162BA1C24A00110F60 /* ChatType.swift */,
 				D2E4C8772AF27D64005AEE42 /* User.swift */,
 				D2E4C8792AF27D7E005AEE42 /* Group.swift */,
 			);
@@ -327,17 +398,30 @@
 				D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */,
 				D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */,
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
+				D2639B2F2BA1C29800110F60 /* Model.ServiceModel.Group.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
 				D2E4C8782AF27D64005AEE42 /* User.swift in Sources */,
+				D2639B232BA1C28A00110F60 /* APIRequester.swift in Sources */,
+				D2639B152BA1C12B00110F60 /* Dictionary+Extension.swift in Sources */,
 				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
+				D2639B2D2BA1C29800110F60 /* Model.ServiceModel.Chat.swift in Sources */,
 				D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */,
+				D2639B2E2BA1C29800110F60 /* Model.ServiceModel.Sender.swift in Sources */,
 				D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */,
+				D2639B172BA1C24A00110F60 /* ChatType.swift in Sources */,
 				D2629A4D2ABB15F50006CEF5 /* FriendListViewModel.swift in Sources */,
+				D2639B192BA1C27700110F60 /* ErrorType.swift in Sources */,
 				D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */,
+				D2639B242BA1C28A00110F60 /* API.RequsetModel.SendChat.swift in Sources */,
+				D2639B1B2BA1C27F00110F60 /* Model.swift in Sources */,
 				D294A2992ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift in Sources */,
+				D2639B302BA1C29800110F60 /* Model.ServiceModel.User.swift in Sources */,
 				D2AAF7692A78F40B006AD936 /* SceneDelegate.swift in Sources */,
 				D2E4C8752AF278F9005AEE42 /* DefaultNetworkUsecase.swift in Sources */,
+				D2639B312BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift in Sources */,
 				D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */,
+				D2639B262BA1C28A00110F60 /* API.swift in Sources */,
+				D2639B252BA1C28A00110F60 /* API.ResponseModel.ResponseChat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
