@@ -30,12 +30,6 @@ class FriendCollectionViewCell: UICollectionViewCell {
     
     // MARK: Internal
     
-    func configure(user: User) {
-        profileImageView.backgroundColor = .green
-//        profileImageView.image = UIImage(systemName: "cloud") // TODO: 이미지캐시로 변경
-        nameLabel.text = user.name
-        stateMessageLabel.text = user.userDescription
-    }
     
     // MARK: Private
     

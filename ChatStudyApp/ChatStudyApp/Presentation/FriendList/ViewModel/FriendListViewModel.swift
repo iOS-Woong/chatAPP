@@ -8,24 +8,5 @@
 import Foundation
 
 final class FriendListViewModel {
-    
-    private let networkUsecase = DefaultNetworkUsecase()
-    
-    var didChangeUsers: (() -> Void)?
-    var users: [User] = [User]() {
-        didSet {
-            didChangeUsers?()
-        }
-    }
-    
-    func getAllUserDetails() {
-        networkUsecase.getAllUserDetails { result in
-            switch result {
-            case .success(let users):
-                self.users = users
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
+
 }

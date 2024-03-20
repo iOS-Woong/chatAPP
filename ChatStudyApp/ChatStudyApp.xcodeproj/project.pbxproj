@@ -38,8 +38,6 @@
 		D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */; };
 		D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */; };
 		D2E4C8752AF278F9005AEE42 /* DefaultNetworkUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */; };
-		D2E4C8782AF27D64005AEE42 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8772AF27D64005AEE42 /* User.swift */; };
-		D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8792AF27D7E005AEE42 /* Group.swift */; };
 		D2FFEF8A2A8CE51C00B41DBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D2FFEF892A8CE51C00B41DBC /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -75,8 +73,6 @@
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
 		D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
 		D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkUsecase.swift; sourceTree = "<group>"; };
-		D2E4C8772AF27D64005AEE42 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D2E4C8792AF27D7E005AEE42 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,8 +299,6 @@
 				D2639B1A2BA1C27E00110F60 /* Model.swift */,
 				D2639B182BA1C27700110F60 /* ErrorType.swift */,
 				D2639B162BA1C24A00110F60 /* ChatType.swift */,
-				D2E4C8772AF27D64005AEE42 /* User.swift */,
-				D2E4C8792AF27D7E005AEE42 /* Group.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -397,11 +391,9 @@
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
 				D2639B2F2BA1C29800110F60 /* Model.ServiceModel.Group.swift in Sources */,
 				D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */,
-				D2E4C8782AF27D64005AEE42 /* User.swift in Sources */,
 				D2639B232BA1C28A00110F60 /* APIRequester.swift in Sources */,
 				D2639B152BA1C12B00110F60 /* Dictionary+Extension.swift in Sources */,
 				D2639B2D2BA1C29800110F60 /* Model.ServiceModel.Chat.swift in Sources */,
-				D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */,
 				D2639B2E2BA1C29800110F60 /* Model.ServiceModel.Sender.swift in Sources */,
 				D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */,
 				D2639B172BA1C24A00110F60 /* ChatType.swift in Sources */,

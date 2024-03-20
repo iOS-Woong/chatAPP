@@ -25,24 +25,14 @@ class FriendListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bind()
         configureNavigation()
         configureCollectionViewLayout()
         configureCollectionViewAttributes()
         configureHierarchy()
         configureLayout()
-        viewModel.getAllUserDetails()
     }
     
     // MARK: Private
-    
-    private func bind() {
-        viewModel.didChangeUsers = {
-            DispatchQueue.main.async {
-                self.friendListCollectionView.reloadData()
-            }
-        }
-    }
     
     private func configureNavigation() {
         title = "ChatList"
@@ -88,7 +78,7 @@ extension FriendListViewController: UICollectionViewDataSource {
         numberOfItemsInSection section: Int)
     -> Int
     {
-        return viewModel.users.count
+        return 0
     }
     
     func collectionView(
@@ -102,7 +92,7 @@ extension FriendListViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configure(user: viewModel.users[indexPath.row])
+        
         
         return cell
     }
