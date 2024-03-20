@@ -33,7 +33,6 @@
 		D2AAF7702A78F40E006AD936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AAF76F2A78F40E006AD936 /* Assets.xcassets */; };
 		D2AAF7732A78F40E006AD936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */; };
 		D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */; };
-		D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A322A83B4A10076B5E1 /* Entity.swift */; };
 		D2B40A382A83B8A10076B5E1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D2B40A372A83B8A10076B5E1 /* Moya */; };
 		D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */; };
 		D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */; };
@@ -72,7 +71,6 @@
 		D2AAF7722A78F40E006AD936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AAF7742A78F40E006AD936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		D2B40A322A83B4A10076B5E1 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
 		D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
@@ -281,7 +279,6 @@
 				D2AAF7662A78F40B006AD936 /* AppDelegate.swift */,
 				D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */,
 				D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */,
-				D2B40A322A83B4A10076B5E1 /* Entity.swift */,
 				D2AAF76F2A78F40E006AD936 /* Assets.xcassets */,
 				D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */,
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
@@ -403,7 +400,6 @@
 				D2E4C8782AF27D64005AEE42 /* User.swift in Sources */,
 				D2639B232BA1C28A00110F60 /* APIRequester.swift in Sources */,
 				D2639B152BA1C12B00110F60 /* Dictionary+Extension.swift in Sources */,
-				D2B40A332A83B4A10076B5E1 /* Entity.swift in Sources */,
 				D2639B2D2BA1C29800110F60 /* Model.ServiceModel.Chat.swift in Sources */,
 				D2E4C87A2AF27D7E005AEE42 /* Group.swift in Sources */,
 				D2639B2E2BA1C29800110F60 /* Model.ServiceModel.Sender.swift in Sources */,

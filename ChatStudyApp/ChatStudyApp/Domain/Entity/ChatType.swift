@@ -18,5 +18,6 @@ enum ChatType: Int, RawRepresentable {
         case .imageChat:
             "imageChat"
         }
+        return ""
     }
 }
