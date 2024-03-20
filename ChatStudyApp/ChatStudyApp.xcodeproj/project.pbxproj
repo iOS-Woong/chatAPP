@@ -33,8 +33,6 @@
 		D2AAF7702A78F40E006AD936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2AAF76F2A78F40E006AD936 /* Assets.xcassets */; };
 		D2AAF7732A78F40E006AD936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */; };
 		D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */; };
-		D2B40A382A83B8A10076B5E1 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D2B40A372A83B8A10076B5E1 /* Moya */; };
-		D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */; };
 		D2B40A3C2A83BB8F0076B5E1 /* PostRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */; };
 		D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */; };
 		D2E4C8752AF278F9005AEE42 /* DefaultNetworkUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */; };
@@ -69,7 +67,6 @@
 		D2AAF7722A78F40E006AD936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AAF7742A78F40E006AD936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2B40A2E2A83AFCD0076B5E1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPI.swift; sourceTree = "<group>"; };
 		D2B40A3B2A83BB8F0076B5E1 /* PostRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRequestModel.swift; sourceTree = "<group>"; };
 		D2B40A3D2A83BC9F0076B5E1 /* Encodable+toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+toDictionary.swift"; sourceTree = "<group>"; };
 		D2E4C8742AF278F9005AEE42 /* DefaultNetworkUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkUsecase.swift; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2B40A382A83B8A10076B5E1 /* Moya in Frameworks */,
 				D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */,
 				D2FFEF8A2A8CE51C00B41DBC /* Alamofire in Frameworks */,
 				D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */,
@@ -274,7 +270,6 @@
 				D2629A3A2ABAF1F70006CEF5 /* Data */,
 				D2AAF7662A78F40B006AD936 /* AppDelegate.swift */,
 				D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */,
-				D2B40A392A83B8C70076B5E1 /* DefaultAPI.swift */,
 				D2AAF76F2A78F40E006AD936 /* Assets.xcassets */,
 				D2AAF7712A78F40E006AD936 /* LaunchScreen.storyboard */,
 				D2AAF7742A78F40E006AD936 /* Info.plist */,
@@ -320,7 +315,6 @@
 			);
 			name = ChatStudyApp;
 			packageProductDependencies = (
-				D2B40A372A83B8A10076B5E1 /* Moya */,
 				D2FFEF892A8CE51C00B41DBC /* Alamofire */,
 				D263D7A52AA890ED00BBF8C1 /* APNS */,
 				D263D7A72AA890ED00BBF8C1 /* APNSCore */,
@@ -354,7 +348,6 @@
 			);
 			mainGroup = D2AAF75A2A78F40B006AD936;
 			packageReferences = (
-				D2B40A362A83B8A10076B5E1 /* XCRemoteSwiftPackageReference "Moya" */,
 				D2FFEF882A8CE51C00B41DBC /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */,
 			);
@@ -386,7 +379,6 @@
 			files = (
 				D2629A472ABAF3AF0006CEF5 /* NetworkService.swift in Sources */,
 				D2AAF76B2A78F40B006AD936 /* FriendListViewController.swift in Sources */,
-				D2B40A3A2A83B8C70076B5E1 /* DefaultAPI.swift in Sources */,
 				D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */,
 				D2B40A3E2A83BC9F0076B5E1 /* Encodable+toDictionary.swift in Sources */,
 				D2639B2F2BA1C29800110F60 /* Model.ServiceModel.Group.swift in Sources */,
@@ -631,14 +623,6 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		D2B40A362A83B8A10076B5E1 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.0;
-			};
-		};
 		D2FFEF882A8CE51C00B41DBC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -659,11 +643,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */;
 			productName = APNSCore;
-		};
-		D2B40A372A83B8A10076B5E1 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D2B40A362A83B8A10076B5E1 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
 		};
 		D2FFEF892A8CE51C00B41DBC /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
