@@ -10,7 +10,6 @@
 		D24DF9BF2A9619370066C5B3 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24DF9BE2A9619370066C5B3 /* WebSocket.swift */; };
 		D2629A472ABAF3AF0006CEF5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */; };
 		D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */; };
-		D2629A4D2ABB15F50006CEF5 /* FriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2629A4C2ABB15F50006CEF5 /* FriendListViewModel.swift */; };
 		D2639B152BA1C12B00110F60 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B142BA1C12A00110F60 /* Dictionary+Extension.swift */; };
 		D2639B172BA1C24A00110F60 /* ChatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B162BA1C24A00110F60 /* ChatType.swift */; };
 		D2639B192BA1C27700110F60 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B182BA1C27700110F60 /* ErrorType.swift */; };
@@ -42,7 +41,6 @@
 		D24DF9C02A9628E70066C5B3 /* ChatStudyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatStudyApp.entitlements; sourceTree = "<group>"; };
 		D2629A462ABAF3AF0006CEF5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D2629A492ABAF5220006CEF5 /* DefaultNetworkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNetworkRepository.swift; sourceTree = "<group>"; };
-		D2629A4C2ABB15F50006CEF5 /* FriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewModel.swift; sourceTree = "<group>"; };
 		D2639B142BA1C12A00110F60 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		D2639B162BA1C24A00110F60 /* ChatType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatType.swift; sourceTree = "<group>"; };
 		D2639B182BA1C27700110F60 /* ErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 		D2629A4B2ABB15DC0006CEF5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D2629A4C2ABB15F50006CEF5 /* FriendListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 				D2639B2E2BA1C29800110F60 /* Model.ServiceModel.Sender.swift in Sources */,
 				D2629A4A2ABAF5220006CEF5 /* DefaultNetworkRepository.swift in Sources */,
 				D2639B172BA1C24A00110F60 /* ChatType.swift in Sources */,
-				D2629A4D2ABB15F50006CEF5 /* FriendListViewModel.swift in Sources */,
 				D2639B192BA1C27700110F60 /* ErrorType.swift in Sources */,
 				D2B40A2F2A83AFCD0076B5E1 /* ChatViewController.swift in Sources */,
 				D2639B242BA1C28A00110F60 /* API.RequsetModel.SendChat.swift in Sources */,

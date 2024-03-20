@@ -9,13 +9,11 @@ import UIKit
 
 class FriendListViewController: UIViewController {
     
-    private let viewModel: FriendListViewModel
     private let friendListCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     
     // MARK: Lifecycle
     
-    init(viewModel: FriendListViewModel) {
-        self.viewModel = viewModel
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
     
