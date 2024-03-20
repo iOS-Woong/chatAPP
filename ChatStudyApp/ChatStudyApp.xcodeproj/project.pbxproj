@@ -24,8 +24,6 @@
 		D2639B2F2BA1C29800110F60 /* Model.ServiceModel.Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B2A2BA1C29800110F60 /* Model.ServiceModel.Group.swift */; };
 		D2639B302BA1C29800110F60 /* Model.ServiceModel.User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B2B2BA1C29800110F60 /* Model.ServiceModel.User.swift */; };
 		D2639B312BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2639B2C2BA1C29800110F60 /* Model.ServiceModel.ChatRoom.swift */; };
-		D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A52AA890ED00BBF8C1 /* APNS */; };
-		D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */ = {isa = PBXBuildFile; productRef = D263D7A72AA890ED00BBF8C1 /* APNSCore */; };
 		D294A2992ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D294A2982ACD7DAD00EADFC0 /* FriendCollectionViewCell.swift */; };
 		D2AAF7672A78F40B006AD936 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAF7662A78F40B006AD936 /* AppDelegate.swift */; };
 		D2AAF7692A78F40B006AD936 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAF7682A78F40B006AD936 /* SceneDelegate.swift */; };
@@ -77,9 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D263D7A62AA890ED00BBF8C1 /* APNS in Frameworks */,
 				D2FFEF8A2A8CE51C00B41DBC /* Alamofire in Frameworks */,
-				D263D7A82AA890ED00BBF8C1 /* APNSCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +312,6 @@
 			name = ChatStudyApp;
 			packageProductDependencies = (
 				D2FFEF892A8CE51C00B41DBC /* Alamofire */,
-				D263D7A52AA890ED00BBF8C1 /* APNS */,
-				D263D7A72AA890ED00BBF8C1 /* APNSCore */,
 			);
 			productName = ChatStudyApp;
 			productReference = D2AAF7632A78F40B006AD936 /* ChatStudyApp.app */;
@@ -349,7 +343,6 @@
 			mainGroup = D2AAF75A2A78F40B006AD936;
 			packageReferences = (
 				D2FFEF882A8CE51C00B41DBC /* XCRemoteSwiftPackageReference "Alamofire" */,
-				D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */,
 			);
 			productRefGroup = D2AAF7642A78F40B006AD936 /* Products */;
 			projectDirPath = "";
@@ -615,14 +608,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/swift-server-community/APNSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		D2FFEF882A8CE51C00B41DBC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -634,16 +619,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D263D7A52AA890ED00BBF8C1 /* APNS */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */;
-			productName = APNS;
-		};
-		D263D7A72AA890ED00BBF8C1 /* APNSCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D263D7A42AA890ED00BBF8C1 /* XCRemoteSwiftPackageReference "APNSwift" */;
-			productName = APNSCore;
-		};
 		D2FFEF892A8CE51C00B41DBC /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D2FFEF882A8CE51C00B41DBC /* XCRemoteSwiftPackageReference "Alamofire" */;
